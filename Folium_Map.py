@@ -62,7 +62,7 @@ def app():
     for column, row in newdf.iterrows():
         location = [row['lat'], row['lon']]
         folium.Marker(location,
-                      popup = f'Data:{row["OCCURRED_ON_DATE"]} Month:{row["MONTH"]}',
+                      popup = f'Date_and_Time:{row["OCCURRED_ON_DATE"]}',
                       icon=folium.Icon(color=color(row['MONTH'])
                       )).add_to(m)
 
