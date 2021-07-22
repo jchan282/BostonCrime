@@ -16,7 +16,7 @@ def app():
     print(df.dtypes)
 
     print("Shooting Location")
-    df=df.loc[df['SHOOTING']== 1, ['lat','lon','OFFENSE_DESCRIPTION','MONTH',"STREET"]]
+    df=df.loc[df['SHOOTING']== 1, ['lat','lon','OFFENSE_DESCRIPTION','MONTH',"STREET","OCCURRED_ON_DATE"]]
     df['MONTH'] = df['MONTH'].astype(str) #convert float to string
     df['MONTH'] = df['MONTH'].replace(['1','2','3','4','5','6'],["January","February","March","April","May","June"])
     #print(df)
@@ -62,7 +62,7 @@ def app():
     for column, row in newdf.iterrows():
         location = [row['lat'], row['lon']]
         folium.Marker(location,
-                      popup = f'Street_Name:{row["STREET"].lower().title()}      Month:{row["MONTH"]}',
+                      popup = f'Data:{row["OCCURRED_ON_DATE"]} Month:{row["MONTH"]}',
                       icon=folium.Icon(color=color(row['MONTH'])
                       )).add_to(m)
 
