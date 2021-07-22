@@ -35,7 +35,7 @@ def app():
 
 
     st.write('You selected:', option)
-    map_results = ":high_brightness:" f"Here is a map showing all the shooting incidents assoicated with **{option.lower()}** in the selected month(s) !"
+    map_results = ":high_brightness:" f"Here is a map showing all the shooting incidents associated with **{option.lower()}** in the selected month(s) !"
     st.markdown(map_results)
     st.write("*Note that different colors of pins represent different months")
 
