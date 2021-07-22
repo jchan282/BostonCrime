@@ -49,7 +49,7 @@ def app():
     ax = sns.countplot(y="OFFENSE_DESCRIPTION",data=newdf2,order=newdf2.OFFENSE_DESCRIPTION.value_counts().iloc[:barNum].index,palette="Set3")
     ax.set(ylabel='Types of Crimes')
 
-    st.write("here a chart showing the top",barNum,"most common crimes in",option,"in the month of",option_Month)
+    st.write("Here a chart showing the top",barNum,"most common crimes in",option,"in the month of",option_Month'!')
     st.pyplot()
 
 
