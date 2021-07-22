@@ -16,7 +16,7 @@ def app():
         st.subheader("background")
         st.markdown("Crime incident reports are provided by Boston Police Department (BPD) to document the initial details surrounding an incident to which BPD officers respond.")
         st.subheader("Dataset Preview")
-        st.dataframe(df)
+        st.dataframe(df.head(10)
 
         st.subheader("District Table")
         st.table(df2)
