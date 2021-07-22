@@ -13,7 +13,7 @@ def app():
         image = Image.open('police_report.jpeg')
         st.image(image)
 
-        st.subheader("background")
+        st.subheader("Background")
         st.markdown("Crime incident reports are provided by Boston Police Department (BPD) to document the initial details surrounding an incident to which BPD officers respond.")
         st.subheader("Dataset Preview")
         st.dataframe(df.head(10))
